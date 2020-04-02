@@ -45,7 +45,7 @@ namespace App1
         //DevicePortalAPIClient client = new DevicePortalAPIClient();
         private DevicePortal portal;
         private Certificate certificate;
-        static string HoloLensUrl = "http://192.168.43.208/";
+        static string HoloLensUrl = "http://127.0.0.1:10080/";
         static string ApiTakePhoto = "api/holographic/mrc/photo?holo=true&pv=true";
         static string ApiGetFile = "api/holographic/mrc/file?filename={0}&op=stream";
         public MainPage()
@@ -63,7 +63,7 @@ namespace App1
         {
             
             portal = new DevicePortal(
-                new DefaultDevicePortalConnection(HoloLensUrl, "Tolegen","hassAn10"));
+                new DefaultDevicePortalConnection(HoloLensUrl, "Tolegen","*****"));
 
             StringBuilder sb = new StringBuilder();
 
